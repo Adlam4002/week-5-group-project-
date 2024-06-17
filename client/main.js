@@ -27,3 +27,27 @@ const formTask = document.getElementById("form-task");
 const LINK = "http://localhost:8080"; // To be changed with the Render URL
 // Add an event listener to the form
 formTask.addEventListener("submit", addnewTask);
+
+// Fetch the task from the API database and display them on the page.
+
+// Create a function to fetch the messages from the API
+async function fetchTasks() {
+  const response = await fetch(`${LINK}/gettasks`);
+  const tasks = await response.json();
+  return tasks;
+}
+
+// Create a function to render the messages on the page
+async function renderTasks() {
+  const tasks = await fetchTasks();
+  console.log(tasks);
+  messageList.innerHTML = `<h3>${tasks.length} Message(s)</h3>`;
+  tasks.forEach((task) => {
+    const taskContainer = document.createElement("div");
+    taskContainer.textContent = `Completed: ${task.complete} Category: ${task.category} Task: ${task.task} priority: ${task.priority} Due Date: ${task.complete_by}`;
+    messageList.appendChild(taskContainer);
+  });
+}
+
+// Call the renderTasks function when the page loads
+renderTasks();

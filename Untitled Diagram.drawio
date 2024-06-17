@@ -1,9 +1,39 @@
-<mxfile host="app.diagrams.net" modified="2024-06-17T10:37:45.029Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" version="24.5.4" etag="AkqEiJV-4fzMyq3SFBR0" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-17T12:21:53.163Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="0osyaxRqb57jYbtk6ftt" version="24.5.4" type="github">
   <diagram name="Page-1" id="URuILYohO7nekbE5N3jr">
-    <mxGraphModel>
+    <mxGraphModel dx="2033" dy="1118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="apol1puXDQaIrFUul9K4-4" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="160" width="470" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-1" value="To-do-list" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="300" width="120" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-2" value="Completed tasks" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="300" width="120" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-3" value="Form to create tasks" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-5" value="" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="170" width="230" height="480" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-6" value="To-do-list" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="310" width="120" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-7" value="Completed tasks" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="755" y="570" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-8" value="Form to create tasks" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="730" y="210" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-10" value="Large screen" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="apol1puXDQaIrFUul9K4-11" value="Mobile" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;" vertex="1" parent="1">
+          <mxGeometry x="780" y="40" width="120" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

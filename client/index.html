@@ -8,7 +8,36 @@
     <title>To-do-list</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <h2>Add Task</h2>
+
+      <form id="form-task" action="frontendurl">
+        <!--  redirects to the current URL + /action_page.php -->
+        <label for="task-name">Type a task here.</label>
+        <input type="text" />
+        <label for="category">Catagory selection:</label>
+        <select name="category" id="task-category">
+          <option value="work">Work</option>
+          <option value="personnel">Personnel</option>
+          <option value="leisure">Leisure</option>
+        </select>
+        <label for="priority">Priority:</label>
+        <select name="priority" id="task-priority">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+
+        <!-- <button class="edit">Edit</button>
+          <button class="delete">Delete</button> -->
+      </form>
+      <div id="task-list"></div>
+
+      <div id="completed-tasks">
+        <h3>Completed</h3>
+      </div>
+    </div>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>

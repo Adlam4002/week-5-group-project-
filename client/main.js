@@ -14,7 +14,11 @@ async function renderTasks() {
   tasks.forEach((task) => {
     const taskContainer = document.createElement("div");
     taskContainer.textContent = `Completed: ${task.complete} Category: ${task.category} Task: ${task.task} priority: ${task.priority} Due Date: ${task.complete_by}`;
-    taskList.appendChild(taskContainer);
+    if (task.complete) {
+      completedTasks.appendChild(taskContainer);
+    } else {
+      taskList.appendChild(taskContainer);
+    }
   });
 }
 

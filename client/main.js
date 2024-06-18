@@ -28,8 +28,8 @@ async function renderTasks() {
     if (task.complete) {
       // and filter for priority
       if (
-        task.priority === taskListFilter.value ||
-        taskListFilter.value === "all"
+        task.priority === completedTasksFilter.value ||
+        completedTasksFilter.value === "all"
       ) {
         completedTasks.appendChild(taskContainer);
       }
@@ -74,7 +74,8 @@ async function addnewTask(event) {
 const formTask = document.getElementById("form-task");
 const taskList = document.getElementById("task-list");
 const completedTasks = document.getElementById("completed-tasks");
-const taskListFilter = document.getElementById("priorityFilter");
+const taskListFilter = document.getElementById("leftPriorityFilter");
+const completedTasksFilter = document.getElementById("rightPriorityFilter");
 
 // Link for the API database
 const LINK = "http://localhost:8080"; // To be changed with the Render URL
@@ -85,6 +86,7 @@ let isTasksRendered = false;
 // Call the renderTasks function when the page loads
 renderTasks();
 taskListFilter.addEventListener("change", renderTasks);
+completedTasksFilter.addEventListener("change", renderTasks);
 
 // Function to create and then toggle timer
 let time = 0;

@@ -21,14 +21,14 @@ app.get("/", (req, res) => {
 
 // Here's the route to post form data to the database.
 app.post("/submit", async (req, res) => {
-  const { complete, category, task, priority, complete_by } = req.body;
+  const { category, task, priority, complete_by } = req.body;
   try {
     await db.query(
       `
     INSERT INTO tasklist (complete, category, task , priority, complete_by)
     VALUES  ($1, $2, $3, $4, $5)
     `,
-      [complete, category, task, priority, complete_by]
+      [false, category, task, priority, complete_by]
     );
     res.status(200).json({ success: true });
   } catch (error) {

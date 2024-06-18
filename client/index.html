@@ -13,7 +13,7 @@
       <h2>Add Task</h2>
 
       <section id="app-area-size">
-      <form id="form-task" action="frontendurl">
+      <form id="form-task">
         <!--  redirects to the current URL + /action_page.php -->
         <label for="category">Catagory selection:</label>
         <select name="category" id="task-category">
@@ -30,9 +30,9 @@
           <input type="date" id="complete_by" name="complete_by">
           <br/>
         <label for="task-name">Type a task below.</label><br />
-        <input type="text" class="text-entry" /><br />
+        <input type="text" name="task" class="text-entry" /><br />
 
-        <button>Submit Task</button>
+        <button type="submit">Submit Task</button>
         <!-- <button class="edit">Edit</button>
           <button class="delete">Delete</button> -->
       </form>
@@ -50,10 +50,17 @@
         <h3>Completed</h3>
         <div id="completed-tasks"></div>
       </div>
-      <button id="aclock" class="flex-container flex-direction-row">+</button>
-    </div>
-  </section>
 
+     
+    </div> 
+   
+
+  </section>
+ 
+  <section id="timer-section">
+  <button id="aclock">Toggle timer</button>
+<div id="timer-container"></div>
+</section>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -43,3 +43,19 @@ app.get("/gettasks", async (req, res) => {
     `);
   res.json(result.rows);
 });
+app.patch("/complete", async (req, res) => {
+  const { id } = req.body;
+  try {
+    await db.query(
+      `
+    UPDATE tasklist
+SET complete = true
+WHERE id = $1`,
+      [id]
+    );
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("You have failedto submit", error);
+    res.status(500).json({ success: false });
+  }
+});

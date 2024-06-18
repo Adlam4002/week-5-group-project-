@@ -131,17 +131,27 @@ button:focus-visible {
 }
 
 #task-list {
+  border-radius: 10px;
   height: 300px;
-  width: 70vw;
+  width: 42vw;
+  flex-direction: column;
   display: flex;
-  overflow-y: hidden;
+  overflow-x: auto;
+  word-wrap: break-word;
+  font-size: 1.3em;
+  background-color: rgba(0.5, 0.5, 0.5, 0.4);
 }
 
 #completed-tasks {
-  width: 70vw;
+  border-radius: 10px;
   height: 300px;
+  width: 42vw;
+  flex-direction: column;
   display: flex;
-  overflow-y: hidden;
+  overflow-x: auto;
+  word-wrap: break-word;
+  font-size: 1.3em;
+  background-color: rgba(0.5, 0.5, 0.5, 0.4);
 }
 
 #task-section {

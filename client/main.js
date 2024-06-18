@@ -9,6 +9,12 @@ async function fetchTasks() {
 
 // Create a function to render the messages on the page
 async function renderTasks() {
+  // Check if the tasks have already been rendered if so delete them
+  if (isTasksRendered) {
+    taskList.innerHTML = "";
+    completedTasks.innerHTML = "";
+  }
+
   // Fetch the tasks from the server
   const tasks = await fetchTasks();
   console.log(tasks);
@@ -20,11 +26,23 @@ async function renderTasks() {
     taskContainer.textContent = `Completed: ${task.complete} Category: ${task.category} Task: ${task.task} priority: ${task.priority} Due Date: ${task.complete_by}`;
     // If the task is complete, append it to the completedTasks div else append it to the taskList div
     if (task.complete) {
-      completedTasks.appendChild(taskContainer);
+      // and filter for priority
+      if (
+        task.priority === completedTasksFilter.value ||
+        completedTasksFilter.value === "all"
+      ) {
+        completedTasks.appendChild(taskContainer);
+      }
     } else {
-      taskList.appendChild(taskContainer);
+      if (
+        task.priority === taskListFilter.value ||
+        taskListFilter.value === "all"
+      ) {
+        taskList.appendChild(taskContainer);
+      }
     }
   });
+  isTasksRendered = true;
 }
 
 // Function to add a task and fetch the data to the server
@@ -48,20 +66,28 @@ async function addnewTask(event) {
     // Error handling
     console.error("Error submitting task!", error);
   }
+  // Reset the form values
+  formTask.reset();
 }
 
 // Get the form from the page
 const formTask = document.getElementById("form-task");
 const taskList = document.getElementById("task-list");
 const completedTasks = document.getElementById("completed-tasks");
+const taskListFilter = document.getElementById("leftPriorityFilter");
+const completedTasksFilter = document.getElementById("rightPriorityFilter");
 
 // Link for the API database
 const LINK = "http://localhost:8080"; // To be changed with the Render URL
 // Add an event listener to the form
 formTask.addEventListener("submit", addnewTask);
 
+let isTasksRendered = false;
 // Call the renderTasks function when the page loads
 renderTasks();
+taskListFilter.addEventListener("change", renderTasks);
+completedTasksFilter.addEventListener("change", renderTasks);
+
 // Function to create and then toggle timer
 let time = 0;
 let clock = null;

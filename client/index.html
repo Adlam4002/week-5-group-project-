@@ -25,8 +25,10 @@
         <select name="priority" id="task-priority">
           <option value="low">Low</option>
           <option value="medium">Medium</option>
-          <option value="high">High</option></select
-        ><br />
+          <option value="high">High</option></select>
+          <label for="complete_by">Date</label>
+          <input type="date" id="complete_by" name="complete_by">
+          <br/>
         <label for="task-name">Type a task below.</label><br />
         <input type="text" name="task" class="text-entry" /><br />
 
@@ -48,9 +50,11 @@
         <h3>Completed</h3>
         <div id="completed-tasks"></div>
       </div>
+
      
     </div> 
    
+
   </section>
  
   <section id="timer-section">

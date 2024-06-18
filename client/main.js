@@ -109,6 +109,10 @@ addClock.addEventListener("click", () => {
     });
     rbut.addEventListener("click", () => {
       time = 0;
+      if (clock) {
+        clearInterval(clock);
+        clock = null;
+      }
       showTime();
     });
     sbut.addEventListener("click", () => {

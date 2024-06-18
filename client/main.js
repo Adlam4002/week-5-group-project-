@@ -23,7 +23,31 @@ async function renderTasks() {
     // Create a div for the task
     const taskContainer = document.createElement("div");
     // Set the text content of the taskContainer div
-    taskContainer.textContent = `Completed: ${task.complete} Category: ${task.category} Task: ${task.task} priority: ${task.priority} Due Date: ${task.complete_by}`;
+    taskContainer.textContent = `Task: ${task.task} Category: ${task.category} Priority: ${task.priority} Due Date: ${task.complete_by}`;
+    // Add a button to mark the task as complete
+    const completeButton = document.createElement("button");
+    completeButton.textContent = "Complete";
+    completeButton.className = "complete-button";
+    // Add an event listener to the complete button
+    completeButton.addEventListener("click", async () => {
+      // Update the task as complete in the database
+      try {
+        await fetch(`${LINK}/complete`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ id: task.id }),
+        });
+        // Render the tasks after updating a task
+        renderTasks();
+      } catch (error) {
+        // Error handling
+        console.error("Error completing task!", error);
+      }
+    });
+    // Append the complete button to the taskContainer div
+    taskContainer.appendChild(completeButton);
     // If the task is complete, append it to the completedTasks div else append it to the taskList div
     if (task.complete) {
       // and filter for priority
@@ -68,6 +92,8 @@ async function addnewTask(event) {
   }
   // Reset the form values
   formTask.reset();
+  // Render the tasks after adding a new task
+  renderTasks();
 }
 
 // Get the form from the page

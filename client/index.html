@@ -8,13 +8,13 @@
     <title>To-do-list</title>
   </head>
   <body>
-    <div id="app">
+    <header><h1>TaskScape</h1></header>
+    <div id="app" class="flex-container flex-direction-column">
       <h2>Add Task</h2>
 
+      <section id="app-area-size">
       <form id="form-task" action="frontendurl">
         <!--  redirects to the current URL + /action_page.php -->
-        <label for="task-name">Type a task here.</label>
-        <input type="text" />
         <label for="category">Catagory selection:</label>
         <select name="category" id="task-category">
           <option value="work">Work</option>
@@ -25,18 +25,31 @@
         <select name="priority" id="task-priority">
           <option value="low">Low</option>
           <option value="medium">Medium</option>
-          <option value="high">High</option>
-        </select>
+          <option value="high">High</option></select
+        ><br />
+        <label for="task-name">Type a task below.</label><br />
+        <input type="text" class="text-entry" /><br />
 
+        <button>Submit Task</button>
         <!-- <button class="edit">Edit</button>
           <button class="delete">Delete</button> -->
       </form>
-      <div id="task-list"></div>
+    </div>
+  </section>
+  
+  <section id="task-area-size">
+    <div id="task-section" class="flex-container">
+      <div id="left-container" class="flex-container flex-direction-column">
+        <h3>To Do</h3>
+        <div id="task-list"></div>
+      </div>
 
-      <div id="completed-tasks">
+      <div id="right-container" class="flex-container flex-direction-column">
         <h3>Completed</h3>
+        <div id="completed-tasks"></div>
       </div>
     </div>
+  </section>
 
     <script type="module" src="./main.js"></script>
   </body>

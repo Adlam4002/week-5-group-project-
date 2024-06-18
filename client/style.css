@@ -26,20 +26,23 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.2em;
+  line-height: 0.5;
 }
 
 #app {
-  max-width: 1280px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
+  height: 40vh;
 }
 
 .logo {
@@ -73,6 +76,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin-top: 10px;
 }
 button:hover {
   border-color: #646cff;
@@ -93,4 +97,112 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#task-list {
+  height: 200px;
+
+  display: flex;
+  overflow-y: hidden;
+}
+
+#completed-tasks {
+  height: 200px;
+  display: flex;
+  overflow-y: hidden;
+}
+
+#task-section {
+  width: 100%;
+  height: 45vh;
+  padding-right: 5px;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-direction-row {
+  flex-direction: row;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.flex-direction-column {
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}
+#task-list {
+  width: 42vw;
+}
+#completed-tasks {
+  width: 42vw;
+}
+
+#left-container {
+  margin: 1vw;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  border: 1vw solid transparent;
+  padding: 4px;
+  border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+  background-image: url("./assets/fullbackground.jpeg");
+  background-size: cover;
+}
+
+#right-container {
+  align-items: center;
+  margin: 1vw;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  margin-bottom: 1vw;
+  border: 1vw solid transparent;
+  padding: 4px;
+  border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+  background-image: url("./assets/fullbackground.jpeg");
+  background-size: cover;
+}
+
+h3 {
+  font-size: 20px;
+  width: 40vw;
+  border: 1vw solid transparent;
+  padding: 4px;
+  border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+  margin: 1vh;
+  background-color: rgba(0.5, 0.5, 0.5, 0.4);
+}
+
+input[type="text"] {
+  padding: 10px;
+  transition: width 0.6s ease-in-out, height 0.6s ease-in-out;
+  border: 1vw solid transparent;
+  border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+  margin-top: 10px;
+  justify-content: center;
+}
+input[type="text"]:focus {
+  width: 80%;
+  height: 20%;
+}
+
+label {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+select {
+  margin-bottom: 10px;
+}
+
+#app-area-size {
+  width: 70vw;
 }

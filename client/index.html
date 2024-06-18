@@ -43,20 +43,27 @@
     <div id="task-section" class="flex-container">
       <div id="left-container" class="flex-container flex-direction-column">
         <h3>To Do</h3>
+        <select id="leftPriorityFilter" name="leftPriorityFilter">
+          <option value="all">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
         <div id="task-list"></div>
       </div>
 
       <div id="right-container" class="flex-container flex-direction-column">
         <h3>Completed</h3>
+        <select id="rightPriorityFilter" name="rightPriorityFilter">
+          <option value="all">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
         <div id="completed-tasks"></div>
       </div>
-
-     
     </div> 
-   
-
   </section>
- 
   <section id="timer-section">
   <button id="aclock">Toggle timer</button>
 <div id="timer-container"></div>

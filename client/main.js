@@ -14,7 +14,9 @@ async function renderTasks() {
   console.log(tasks);
   // Loop through the tasks and create a div for each task
   tasks.forEach((task) => {
+    // Create a div for the task
     const taskContainer = document.createElement("div");
+    // Set the text content of the taskContainer div
     taskContainer.textContent = `Completed: ${task.complete} Category: ${task.category} Task: ${task.task} priority: ${task.priority} Due Date: ${task.complete_by}`;
     // If the task is complete, append it to the completedTasks div else append it to the taskList div
     if (task.complete) {

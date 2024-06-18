@@ -57,3 +57,66 @@ formTask.addEventListener("submit", addnewTask);
 
 // Call the renderTasks function when the page loads
 renderTasks();
+
+let time = 0;
+let clock = null;
+let addClock = document.querySelector("#aclock");
+
+addClock.addEventListener("click", () => {
+  let newTimer = document.createElement("div");
+  newTimer.id = "tbox";
+  newTimer.style = "width: 95px; height: 60px; border: solid gray;";
+  newTimer.innerHTML = ` <button id="m5">5</button>
+      <button id="m10">10</button>
+      <button id="m15">15</button>
+      <div id="display-time" style="text-align: center"></div>
+      <div id="mins"></div>
+      <button id="start">⏯️</button>
+      <button id="reset">Reset</button>`;
+  document.body.appendChild(newTimer);
+  let b5 = document.querySelector("#m5");
+  let b10 = document.querySelector("#m10");
+  let b15 = document.querySelector("#m15");
+  let display = document.querySelector("#display-time");
+  let sbut = document.querySelector("#start");
+  let rbut = document.querySelector("#reset");
+  function showTime() {
+    let min = Math.floor(time / 60);
+    let sec = time % 60;
+    display.textContent = `M:${min} S:${sec}`;
+  }
+  b5.addEventListener("click", () => {
+    time += 5;
+    showTime();
+  });
+  b10.addEventListener("click", () => {
+    time += 600;
+    showTime();
+  });
+  b15.addEventListener("click", () => {
+    time += 900;
+    showTime();
+  });
+  rbut.addEventListener("click", () => {
+    time = 0;
+    showTime();
+  });
+  sbut.addEventListener("click", () => {
+    if (clock) {
+      clearInterval(clock);
+      clock = null;
+      showTime();
+    } else if (time > 0) {
+      clock = setInterval(() => {
+        time -= 1;
+        showTime();
+        if (time == 0) {
+          clearInterval(clock);
+          clock = null;
+          alert("Time is up!");
+        }
+      }, 1000);
+    }
+  });
+  showTime();
+});

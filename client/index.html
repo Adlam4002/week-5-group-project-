@@ -13,7 +13,7 @@
       <h2>Add Task</h2>
 
       <section id="app-area-size">
-      <form id="form-task" action="frontendurl">
+      <form id="form-task">
         <!--  redirects to the current URL + /action_page.php -->
         <label for="category">Catagory selection:</label>
         <select name="category" id="task-category">
@@ -28,9 +28,9 @@
           <option value="high">High</option></select
         ><br />
         <label for="task-name">Type a task below.</label><br />
-        <input type="text" class="text-entry" /><br />
+        <input type="text" name="task" class="text-entry" /><br />
 
-        <button>Submit Task</button>
+        <button type="submit">Submit Task</button>
         <!-- <button class="edit">Edit</button>
           <button class="delete">Delete</button> -->
       </form>

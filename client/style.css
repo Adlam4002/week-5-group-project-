@@ -206,3 +206,18 @@ select {
 #app-area-size {
   width: 70vw;
 }
+#tbox {
+  border: 1vw solid transparent;
+  border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+}
+#timer-container {
+  display: flex;
+}
+#timer-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+#aclock {
+  height: 60px;
+  width: 130px;
+}

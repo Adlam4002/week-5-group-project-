@@ -43,6 +43,7 @@ app.get("/gettasks", async (req, res) => {
     `);
   res.json(result.rows);
 });
+// Ratch route to change the complete value of a row
 app.patch("/complete", async (req, res) => {
   const { id, setTo } = req.body;
   try {

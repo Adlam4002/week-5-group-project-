@@ -83,7 +83,6 @@ async function renderTasks() {
   }
   isTasksRendered = true;
 }
-
 // Function to add a task and fetch the data to the server
 async function addnewTask(event) {
   event.preventDefault();
@@ -160,10 +159,10 @@ addClock.addEventListener("click", () => {
       let hour = Math.floor(time / 3600);
       let min = Math.floor((time / 60) % 60);
       let sec = time % 60;
-      display.textContent = `H:${hour} M:${min} S:${sec}`;
+      display.textContent = `${hour}:${min}:${sec}`;
     }
     b5.addEventListener("click", () => {
-      time += 5;
+      time += 300;
       showTime();
     });
     b10.addEventListener("click", () => {
@@ -203,7 +202,7 @@ addClock.addEventListener("click", () => {
   } else {
     if (newTimer.style.display !== "none") newTimer.style.display = "none";
     else {
-      newTimer.style.display = "block";
+      newTimer.style.display = "grid";
     }
   }
 });

@@ -196,18 +196,32 @@ button:focus-visible {
   background-image: url("./assets/fullbackground.jpeg");
   background-size: cover;
 }
-
+#rightPriorityFilter {
+  justify-self: end;
+  align-self: center;
+  grid-area: 1/1/2/2;
+}
+#leftPriorityFilter {
+  justify-self: end;
+  align-self: center;
+  grid-area: 1/1/2/2;
+}
 h3 {
+  grid-area: 1/1/2/2;
+  align-self: center;
+  margin: auto;
+}
+#h3 {
   font-size: 20px;
-  width: 40vw;
+  display: grid;
+  flex-direction: column;
+  width: 80vw;
   border: 1vw solid transparent;
   padding: 4px;
   border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
   margin: 1vh;
 
   background-color: rgba(0.5, 0.5, 0.5, 0.4);
-  display: flex;
-  justify-content: center;
 }
 
 input[type="text"] {
@@ -378,7 +392,27 @@ select {
     top: 10vh;
     left: 10vw;
   }
+  #rightPriorityFilter {
+    justify-self: end;
+    align-self: center;
+    grid-area: 1/1/2/2;
+  }
+  #leftPriorityFilter {
+    justify-self: end;
+    align-self: center;
+    grid-area: 1/1/2/2;
+  }
+  #h3 {
+    font-size: 20px;
+    display: grid;
+    width: 40vw;
+    border: 1vw solid transparent;
+    padding: 4px;
+    border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+    margin: 1vh;
 
+    background-color: rgba(0.5, 0.5, 0.5, 0.4);
+  }
   #m5 {
     margin-top: 0;
     grid-area: 1/1/2/2;

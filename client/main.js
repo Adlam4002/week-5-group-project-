@@ -110,7 +110,7 @@ async function addnewTask(event) {
   renderTasks();
   setTimeout(() => {
     taskList.scrollTop = taskList.scrollHeight;
-  }, 100);
+  }, 200);
 }
 
 // Get the form from the page

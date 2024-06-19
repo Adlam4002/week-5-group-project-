@@ -68,7 +68,6 @@ async function renderTasks() {
   });
   isTasksRendered = true;
 }
-
 // Function to add a task and fetch the data to the server
 async function addnewTask(event) {
   event.preventDefault();

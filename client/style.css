@@ -259,8 +259,36 @@ select {
   border-style: groove;
 }
 #tbox {
+  background-color: rgb(79, 95, 113, 0.4);
+  display: grid;
+  align-items: center;
+  grid-template-columns: 30% 5% 30% 5% 30%;
+  grid-template-rows: 1fr 1fr 1fr;
   border: 1vw solid transparent;
   border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+}
+#m5 {
+  margin-top: 0;
+  grid-area: 1/1/2/2;
+}
+#m10 {
+  margin-top: 0;
+  grid-area: 1/3/2/4;
+}
+#m15 {
+  margin-top: 0;
+  grid-area: 1/5/2/6;
+}
+#start {
+  margin-top: 0;
+  grid-area: 3/1/4/2;
+}
+#reset {
+  margin-top: 0;
+  grid-area: 3/3/4/6;
+}
+#display-time {
+  grid-area: 2/1/3/6;
 }
 #timer-container {
   display: flex;
@@ -298,5 +326,41 @@ select {
   #completed-tasks {
     width: 90%;
     height: 80%;
+  }
+  #tbox {
+    background-color: rgb(79, 95, 113, 0.4);
+    display: grid;
+    align-items: center;
+    grid-template-columns: 30% 5% 30% 5% 30%;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1vw solid transparent;
+    border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+  }
+
+  #m5 {
+    margin-top: 0;
+    grid-area: 1/1/2/2;
+  }
+  #m10 {
+    margin-top: 0;
+    grid-area: 1/3/2/4;
+  }
+  #m15 {
+    margin-top: 0;
+    grid-area: 1/5/2/6;
+  }
+  #start {
+    margin-top: 0;
+    grid-area: 3/1/4/2;
+  }
+  #reset {
+    margin-top: 0;
+    grid-area: 3/3/4/6;
+  }
+  #display-time {
+    grid-area: 2/1/3/6;
   }
 }

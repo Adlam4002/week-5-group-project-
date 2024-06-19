@@ -11,7 +11,9 @@
     <header><img src="./assets/logo.png" alt="TaskScape logo"/></header>
     <div id="app" class="flex-container flex-direction-column">
       <h2>Assign your task Adventurer!</h2> <!--"Adventurer could be relaceped with a username should we let the user enter one"-->
-
+      <div id="timer-container">
+        <button id="aclock" class="clock-button">Toggle timer</button>
+      </div>
       <section id="app-area-size">
       <form id="form-task">
         <!--  redirects to the current URL + /action_page.php -->
@@ -38,7 +40,6 @@
       </form>
     </div>
   </section>
-  
   <section id="task-area-size" class="flex-container">
   <div id="task-section" class="flex-container">
      
@@ -66,9 +67,9 @@
     </div> 
   </section>
   <section id="timer-section">
-  <button id="aclock" class="clock-button">Toggle timer</button>
-<div id="timer-container"><img class="cat-design" src="./assets/cat.gif" alt=""></div>
+<div><img class="cat-design" src="./assets/cat.gif" alt=""></div>
 </section>
+<div class="phone-timer-section"></div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -108,6 +108,9 @@ async function addnewTask(event) {
   formTask.reset();
   // Render the tasks after adding a new task
   renderTasks();
+  setTimeout(() => {
+    taskList.scrollTop = taskList.scrollHeight;
+  }, 100);
 }
 
 // Get the form from the page

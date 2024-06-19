@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/sword-icon.svg" />
     <link rel="stylesheet" href="./style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./level.js" defer></script>
@@ -12,14 +12,16 @@
     <header><img src="./assets/logo.png" alt="TaskScape logo"/></header>
     <div id="app" class="flex-container flex-direction-column">
       <h2>Assign your task Adventurer!</h2> <!--"Adventurer could be relaceped with a username should we let the user enter one"-->
-
+      <div id="timer-container">
+        <button id="aclock" class="clock-button">Toggle timer</button>
+      </div>
       <section id="app-area-size">
       <form id="form-task">
         <!--  redirects to the current URL + /action_page.php -->
-        <label for="category">Catagory selection:</label>
+        <label for="category">Category selection:</label>
         <select name="category" id="task-category">
           <option value="work">Work</option>
-          <option value="personnel">Personnel</option>
+          <option value="personal">Personal</option>
           <option value="leisure">Leisure</option>
         </select>
         <label for="priority">Priority:</label>
@@ -28,10 +30,10 @@
           <option value="medium">Medium</option>
           <option value="high">High</option></select>
           <label for="complete_by">Date</label>
-          <input type="date" id="complete_by" name="complete_by">
+          <input type="date" id="complete_by" name="complete_by" required>
           <br/>
         <label for="task-name">Type a task below.</label><br />
-        <input type="text" name="task" class="text-entry" placeholder="Enter your task here"/><br />
+        <input type="text" name="task" class="text-entry" placeholder="Enter your task here" required/><br />
 
         <button type="submit" class="submit-button">Submit Task</button>
         <!-- <button class="edit">Edit</button>
@@ -39,37 +41,36 @@
       </form>
     </div>
   </section>
-  
   <section id="task-area-size" class="flex-container">
   <div id="task-section" class="flex-container">
      
       <div id="left-container" class="flex-container flex-direction-column">
-        <h3>To Do</h3>
+        <div id="h3"><h3>To Do</h3>
         <select id="leftPriorityFilter" name="leftPriorityFilter">
           <option value="all">All</option>
           <option value="low">Low</option>
           <option value="medium">Medium</option>
           <option value="high">High</option>
-        </select>
+        </select></div>
         <div id="task-list"></div>
       </div>
     
       <div id="right-container" class="flex-container flex-direction-column">
-        <h3>Completed</h3>
+        <div id="h3"><h3>Completed</h3>
         <select id="rightPriorityFilter" name="rightPriorityFilter">
           <option value="all">All</option>
           <option value="low">Low</option>
           <option value="medium">Medium</option>
           <option value="high">High</option>
-        </select>
+        </select></div>
         <div id="completed-tasks"></div>
       </div>
     </div> 
   </section>
   <section id="timer-section">
-  <button id="aclock" class="clock-button">Toggle timer</button>
-<div id="timer-container"><img class="cat-design" src="./assets/cat.gif" alt=""></div>
+<div><img class="cat-design" src="./assets/cat.gif" alt=""></div>
 </section>
+<div class="phone-timer-section"></div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>

@@ -108,6 +108,9 @@ async function addnewTask(event) {
   formTask.reset();
   // Render the tasks after adding a new task
   renderTasks();
+  setTimeout(() => {
+    taskList.scrollTop = taskList.scrollHeight;
+  }, 200);
 }
 
 // Get the form from the page
@@ -118,7 +121,8 @@ const taskListFilter = document.getElementById("leftPriorityFilter");
 const completedTasksFilter = document.getElementById("rightPriorityFilter");
 
 // Link for the API database
-const LINK = "http://localhost:8080"; // To be changed with the Render URL
+const LINK = "https://week-5-group-project-server.onrender.com";
+// const LINK = "http://localhost:8080"; // To be changed with the Render URL
 // Add an event listener to the form
 formTask.addEventListener("submit", addnewTask);
 

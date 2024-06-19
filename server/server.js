@@ -39,7 +39,8 @@ app.post("/submit", async (req, res) => {
 // Here's the route to get the taskData from the databse
 app.get("/gettasks", async (req, res) => {
   const result = await db.query(`
-    SELECT id, complete, category, task , priority, complete_by FROM tasklist
+    SELECT id, complete, category, task , priority, complete_by,
+  to_char(now(), 'DD/MM/YYYY') FROM tasklist
     `);
   res.json(result.rows);
 });

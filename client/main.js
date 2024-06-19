@@ -55,7 +55,7 @@ async function renderTasks() {
     const taskContainer = document.createElement("div");
     // Set the text content of the taskContainer div
     taskContainer.textContent = `Task: ${task.task} Category: ${task.category} Priority: ${task.priority} Due Date: ${task.complete_by}`;
-    // todo call the create task button function
+    // Create the right button for the task
     const button = await createTaskButton(task.complete, task.id);
     // If the task is complete, append it to the completedTasks div else append it to the taskList div
     if (task.complete) {

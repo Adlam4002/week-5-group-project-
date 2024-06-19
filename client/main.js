@@ -7,6 +7,37 @@ async function fetchTasks() {
   return tasks;
 }
 
+// Create a function to add a button to the task
+async function createTaskButton(isComplete, taskID) {
+  // Add a button to mark the task as complete
+  const button = document.createElement("button");
+  button.textContent = isComplete ? "Undo" : "Finished";
+  button.className = "complete-button";
+  // Add an event listener to the complete button
+  button.addEventListener("click", async () => {
+    // Update the task as complete in the database
+    try {
+      await fetch(`${LINK}/complete`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          id: taskID,
+          // Set the task to the opposite of the current state
+          setTo: !isComplete,
+        }),
+      });
+      // Render the tasks after updating a task
+      renderTasks();
+    } catch (error) {
+      // Error handling
+      console.error("Error completing task!", error);
+    }
+  });
+  return button;
+}
+
 // Create a function to render the messages on the page
 async function renderTasks() {
   // Check if the tasks have already been rendered if so delete them
@@ -19,35 +50,13 @@ async function renderTasks() {
   const tasks = await fetchTasks();
   console.log(tasks);
   // Loop through the tasks and create a div for each task
-  tasks.forEach((task) => {
+  for (const task of tasks) {
     // Create a div for the task
     const taskContainer = document.createElement("div");
     // Set the text content of the taskContainer div
     taskContainer.textContent = `Task: ${task.task} Category: ${task.category} Priority: ${task.priority} Due Date: ${task.complete_by}`;
-    // Add a button to mark the task as complete
-    const completeButton = document.createElement("button");
-    completeButton.textContent = "Complete";
-    completeButton.className = "complete-button";
-    // Add an event listener to the complete button
-    completeButton.addEventListener("click", async () => {
-      // Update the task as complete in the database
-      try {
-        await fetch(`${LINK}/complete`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ id: task.id }),
-        });
-        // Render the tasks after updating a task
-        renderTasks();
-      } catch (error) {
-        // Error handling
-        console.error("Error completing task!", error);
-      }
-    });
-    // Append the complete button to the taskContainer div
-    taskContainer.appendChild(completeButton);
+    // todo call the create task button function
+    const button = await createTaskButton(task.complete, task.id);
     // If the task is complete, append it to the completedTasks div else append it to the taskList div
     if (task.complete) {
       // and filter for priority
@@ -55,6 +64,9 @@ async function renderTasks() {
         task.priority === completedTasksFilter.value ||
         completedTasksFilter.value === "all"
       ) {
+        // Append the button to the taskContainer div
+        taskContainer.appendChild(button);
+        // Append the taskContainer div to the completedTasks div
         completedTasks.appendChild(taskContainer);
       }
     } else {
@@ -62,10 +74,13 @@ async function renderTasks() {
         task.priority === taskListFilter.value ||
         taskListFilter.value === "all"
       ) {
+        // Append the button to the taskContainer div
+        taskContainer.appendChild(button);
+        // Append the taskContainer div to the taskList div
         taskList.appendChild(taskContainer);
       }
     }
-  });
+  }
   isTasksRendered = true;
 }
 

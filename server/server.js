@@ -44,14 +44,14 @@ app.get("/gettasks", async (req, res) => {
   res.json(result.rows);
 });
 app.patch("/complete", async (req, res) => {
-  const { id } = req.body;
+  const { id, setTo } = req.body;
   try {
     await db.query(
       `
     UPDATE tasklist
-SET complete = true
+SET complete = $2
 WHERE id = $1`,
-      [id]
+      [id, setTo]
     );
     res.status(200).json({ success: true });
   } catch (error) {

@@ -8,7 +8,7 @@
     <title>TaskScape</title>
   </head>
   <body>
-    <header><h1>TaskScape</h1></header>
+    <header><img src="./assets/logo.png" alt="TaskScape logo"/></header>
     <div id="app" class="flex-container flex-direction-column">
       <h2>Assign your task Adventurer!</h2> <!--"Adventurer could be relaceped with a username should we let the user enter one"-->
 
@@ -32,7 +32,7 @@
         <label for="task-name">Type a task below.</label><br />
         <input type="text" name="task" class="text-entry" placeholder="Enter your task here"/><br />
 
-        <button type="submit">Submit Task</button>
+        <button type="submit" class="submit-button">Submit Task</button>
         <!-- <button class="edit">Edit</button>
           <button class="delete">Delete</button> -->
       </form>
@@ -66,8 +66,8 @@
     </div> 
   </section>
   <section id="timer-section">
-  <button id="aclock">Toggle timer</button>
-<div id="timer-container"></div>
+  <button id="aclock" class="clock-button">Toggle timer</button>
+<div id="timer-container"><img class="cat-design" src="./assets/cat.gif" alt=""></div>
 </section>
     <script type="module" src="./main.js"></script>
   </body>

@@ -53,8 +53,22 @@ async function renderTasks() {
   for (const task of tasks) {
     // Create a div for the task
     const taskContainer = document.createElement("div");
+    taskContainer.className = "task-container";
+    const taskTextDiv = document.createElement("div");
+    taskTextDiv.className = "task-text-div";
+    const taskCategoryDiv = document.createElement("div");
+    taskCategoryDiv.className = "task-category-div";
+    // Create a p tag for the task
+    const taskText = document.createElement("p");
+    // Set the text content of the task
+    taskText.innerHTML = `${task.task} <p style="font-size:0.9rem;  margin: 0; padding: 0;">Due Date: ${task.to_char}</p>`;
+    const categoryText = document.createElement("p");
+    categoryText.innerHTML = `Category: ${task.category} Priority: ${task.priority}`;
     // Set the text content of the taskContainer div
-    taskContainer.textContent = `Task: ${task.task} Category: ${task.category} Priority: ${task.priority} Due Date: ${task.to_char}`;
+    taskTextDiv.appendChild(taskText);
+    taskCategoryDiv.appendChild(categoryText);
+    taskContainer.appendChild(taskTextDiv);
+    taskContainer.appendChild(taskCategoryDiv);
     // Create the right button for the task
     const button = await createTaskButton(task.complete, task.id);
     // If the task is complete, append it to the completedTasks div else append it to the taskList div
@@ -65,7 +79,7 @@ async function renderTasks() {
         completedTasksFilter.value === "all"
       ) {
         // Append the button to the taskContainer div
-        taskContainer.appendChild(button);
+        taskTextDiv.appendChild(button);
         // Append the taskContainer div to the completedTasks div
         completedTasks.appendChild(taskContainer);
       }
@@ -75,7 +89,7 @@ async function renderTasks() {
         taskListFilter.value === "all"
       ) {
         // Append the button to the taskContainer div
-        taskContainer.appendChild(button);
+        taskTextDiv.appendChild(button);
         // Append the taskContainer div to the taskList div
         taskList.appendChild(taskContainer);
       }

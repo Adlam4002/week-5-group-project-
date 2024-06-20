@@ -440,7 +440,7 @@ input::placeholder {
 .progress-bar {
   position: fixed;
   bottom: 5%;
-  left: 1%;
+  left: 3%;
   z-index: 1;
 }
 .xp-to-lvl {

@@ -406,6 +406,22 @@ select {
   transform: scaleX(-1);
 }
 
+.progress-bar {
+  position: absolute;
+  top: 60.7%;
+  right: 52%;
+}
+.xp-to-lvl {
+  position: absolute;
+  top: 62%;
+  right: 32%;
+}
+meter {
+  width: 70px;
+  height: 25px;
+  border: 1px solid #ccc;
+}
+
 @media only screen and (min-width: 1000px) {
   .flex-container {
     display: flex;
@@ -432,6 +448,16 @@ select {
   #completed-tasks {
     width: 90%;
     height: 80%;
+  }
+  .progress-bar {
+    position: absolute;
+    top: 20.2%;
+    right: 17%;
+  }
+  .xp-to-lvl {
+    position: absolute;
+    top: 22%;
+    right: 10%;
   }
 
   #flex-container flex-direction-column {

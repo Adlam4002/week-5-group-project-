@@ -438,19 +438,26 @@ input::placeholder {
 }
 
 .progress-bar {
-  position: absolute;
-  top: 60.7%;
-  right: 52%;
+  position: fixed;
+  bottom: 5%;
+  left: 1%;
+  z-index: 1;
 }
 .xp-to-lvl {
-  position: absolute;
-  top: 62%;
-  right: 32%;
+  position: fixed;
+  bottom: 6%;
+  left: 3%;
+  z-index: 1;
 }
 meter {
-  width: 70px;
-  height: 25px;
   border: 1px solid #ccc;
+}
+
+.player-icon-design {
+  position: fixed;
+  bottom: 2%;
+  left: 0;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -482,13 +489,27 @@ meter {
   }
   .progress-bar {
     position: absolute;
-    top: 20.2%;
-    right: 17%;
+    top: 22vh;
+    left: auto;
+    right: 15.5vw;
+    bottom: auto;
   }
   .xp-to-lvl {
     position: absolute;
-    top: 22%;
-    right: 10%;
+    top: 25vh;
+    left: auto;
+    right: 15vw;
+    bottom: auto;
+  }
+
+  .player-icon-design {
+    position: absolute;
+    top: 25vh;
+    left: auto;
+    right: 17vw;
+    bottom: auto;
+    /* border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+    border-image-width: 4% 4% 4% 4%; */
   }
 
   #flex-container flex-direction-column {

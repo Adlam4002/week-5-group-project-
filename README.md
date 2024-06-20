@@ -25,7 +25,12 @@ As a user i want to press a button to mark a task complete.
 Wireframe:
 
 A list of any libraries, frameworks, or packages that your application requires in order to properly function:
-Express.js, pg, cors...
+
+- vite
+- cors
+- dotenv
+- express
+- pg
 
 Lighthouse report:
 

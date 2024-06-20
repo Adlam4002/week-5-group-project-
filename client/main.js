@@ -82,6 +82,7 @@ async function renderTasks() {
     }
   }
   isTasksRendered = true;
+  calculateTotalXp();
 }
 // Function to add a task and fetch the data to the server
 async function addnewTask(event) {
@@ -225,3 +226,5 @@ addClock.addEventListener("click", () => {
     }
   }
 });
+
+import { calculateTotalXp } from "./level";

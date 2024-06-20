@@ -11,13 +11,16 @@ Alex, Daniel and Josh as a team will be creating a to-do-list app.
 Team members: Alex , Daniel , Josh
 
 Project description:
-A site which both allows you to create a virtual pantry of all the food items in your house and see which recipes you might want to cook using those ingredients.
+A fun and interactive To-Do list app with RPG elements. In a charming pixelated style, this app turns your daily tasks into an adventure. Completing tasks earns you experience points (XP) and levels up your character. Each level unlocks new player icons, making your avatar cooler. This app helps you stay organized while adding a fun twist, making every task feel like an achievement in your RPG journey.
 
 Problem domain:
-People can't always remember what food items they have in their houses, and coming up with recipe ideas isn't always easy.
+People often struggle to manage and prioritize their daily tasks effectively, and remembering all tasks without a systematic approach can lead to stress and missed deadlines. Balancing work, personal life, and other responsibilities can be challenging without a clear and organized way to visualize and update tasks as priorities change.
 
 User stories:
-As a user, I want to see a list of the items I have in my pantry.
+As a user I want to be able to a see a list of my pending tasks and completed tasks.
+As a user I want to set a timer to have my task done by.
+As a user I want to filter my tasks by category.
+As a user i want to press a button to mark a task complete.
 
 Wireframe:
 

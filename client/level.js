@@ -39,7 +39,7 @@ export const calculateTotalXp = async () => {
     ).json();
 
     let totalXp = 0;
-
+    let userLevel = 1;
     // Loop through each task and calculate XP
     res.forEach((task) => {
       if (task.complete) {
@@ -61,9 +61,6 @@ export const calculateTotalXp = async () => {
 
     console.log(`Total XP: ${totalXp}`);
     let xpBar = document.querySelector("#xp-to-lvl");
-
-    let buttonTest = document.querySelector("#test-button");
-    buttonTest.addEventListener("click", setXpBoundary);
 
     function setXpBoundary() {
       if (totalXp >= 0 && totalXp <= 99) {
@@ -88,6 +85,21 @@ export const calculateTotalXp = async () => {
         xpBar.value = totalXp;
       }
     }
+    let lvlDisplay = document.querySelector(".progress-bar");
+    function setLevel() {
+      if (totalXp >= 0 && totalXp <= 99) {
+        lvlDisplay.textContent = "Level: 1";
+      } else if (totalXp >= 100 && totalXp <= 249) {
+        lvlDisplay.textContent = "Level: 2";
+      } else if (totalXp >= 250 && totalXp <= 499) {
+        lvlDisplay.textContent = "Level: 3";
+      } else if (totalXp >= 500 && totalXp <= 999) {
+        lvlDisplay.textContent = "Level: 4";
+      } else if (totalXp >= 1000) {
+        lvlDisplay.textContent = "Level: 5";
+      }
+    }
+    setLevel();
     setXpBoundary();
     return totalXp;
   } catch (err) {

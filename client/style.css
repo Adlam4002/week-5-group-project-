@@ -338,7 +338,6 @@ select {
 .submit-button {
   border-radius: 2px;
   border: 5px solid transparent;
-  padding: 0.6em 1.2em;
   width: 140px;
   height: 65px;
   font-size: 1em;
@@ -355,7 +354,6 @@ select {
   border-radius: 8px;
   border: 5px solid transparent;
   color: #ffff00;
-  padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
@@ -364,7 +362,6 @@ select {
   transition: border-color 0.25s;
   margin-top: 30px;
   border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
-  text-align: center;
   margin-bottom: 10px;
   position: fixed;
   bottom: 0;

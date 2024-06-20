@@ -102,20 +102,25 @@ export const calculateTotalXp = async () => {
     let playerIcon = document.querySelector("#player-icon");
     function setIcon() {
       if (totalXp >= 0 && totalXp <= 99) {
-        playerIcon.style.backgroundImage =
-          "url('https://static-00.iconduck.com/assets.00/1-digit-icon-256x256-qx6qfe5g.png')";
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/Level 1.png')";
       } else if (totalXp >= 100 && totalXp <= 249) {
-        playerIcon.style.backgroundImage =
-          "url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Eo_circle_red_number-2.svg/512px-Eo_circle_red_number-2.svg.png?20200417174008')";
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 2.png')";
       } else if (totalXp >= 250 && totalXp <= 499) {
-        playerIcon.style.backgroundImage =
-          "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwJ8og72X3l9Ko9LcjRd2nKnLpOygTMCd018Ruow-5rfSP7RU3yxrH3z7BfGOGKodk3F4&usqp=CAU')";
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 3.png')";
       } else if (totalXp >= 500 && totalXp <= 999) {
-        playerIcon.style.backgroundImage =
-          "url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Eo_circle_red_number-4.svg/2048px-Eo_circle_red_number-4.svg.png')";
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 4.png')";
       } else if (totalXp >= 1000) {
-        playerIcon.style.backgroundImage =
-          "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbl9Qt5hMKDY3sZupiqjDyi7sRziiNKKHrMw&s')";
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 5.png')";
       }
     }
     setIcon();

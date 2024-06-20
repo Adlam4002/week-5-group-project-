@@ -99,6 +99,31 @@ export const calculateTotalXp = async () => {
         lvlDisplay.textContent = "Level: 5";
       }
     }
+    let playerIcon = document.querySelector("#player-icon");
+    function setIcon() {
+      if (totalXp >= 0 && totalXp <= 99) {
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/Level 1.png')";
+      } else if (totalXp >= 100 && totalXp <= 249) {
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 2.png')";
+      } else if (totalXp >= 250 && totalXp <= 499) {
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 3.png')";
+      } else if (totalXp >= 500 && totalXp <= 999) {
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 4.png')";
+      } else if (totalXp >= 1000) {
+        playerIcon.style.width = "75px";
+        playerIcon.style.height = "75px";
+        playerIcon.style.backgroundImage = "url('./assets/level 5.png')";
+      }
+    }
+    setIcon();
     setLevel();
     setXpBoundary();
     return totalXp;

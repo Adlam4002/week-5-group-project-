@@ -202,8 +202,6 @@ button:focus-visible {
   height: 100%;
   width: 95%;
   border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
-  background-image: url("./assets/fullbackground.jpeg");
-  background-size: cover;
 }
 
 #right-container {
@@ -216,7 +214,13 @@ button:focus-visible {
   height: 100%;
   width: 95%;
   border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+}
+.design1 {
   background-image: url("./assets/fullbackground.jpeg");
+  background-size: cover;
+}
+.design2 {
+  background-image: url("./assets/flyingisland.gif");
   background-size: cover;
 }
 #rightPriorityFilter {

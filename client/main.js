@@ -246,5 +246,17 @@ addClock.addEventListener("click", () => {
     }
   }
 });
-
+document.getElementById("cat-gif").addEventListener("click", function () {
+  let divs = document.querySelectorAll("#right-container, #left-container");
+  divs.forEach(function (div) {
+    // Loop through each div
+    if (div.classList.contains("design1")) {
+      div.classList.remove("design1");
+      div.classList.add("design2");
+    } else {
+      div.classList.remove("design2");
+      div.classList.add("design1");
+    }
+  });
+});
 import { calculateTotalXp } from "./level";

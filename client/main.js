@@ -90,7 +90,11 @@ async function addnewTask(event) {
   console.log("Task submitted!");
   // Get the form data and convert it to an object to be sent to the server
   const formData = Object.fromEntries(new FormData(formTask));
+
   console.log(formData);
+
+  // Save the selected date to localStorage so it can be used after form submission
+  localStorage.setItem("selectedDate", dateSelector.value);
   // Send the data to the server
   try {
     // Fetch the data from the server
@@ -109,9 +113,20 @@ async function addnewTask(event) {
   formTask.reset();
   // Render the tasks after adding a new task
   renderTasks();
+  setDateValue(); // Set the date value after adding a new task
   setTimeout(() => {
     taskList.scrollTop = taskList.scrollHeight;
   }, 200);
+}
+
+function setDateValue() {
+  // Check if there's a saved date in localStorage and use it, otherwise use today's date
+  const savedDate = localStorage.getItem("selectedDate");
+  const todayDate = new Date().toISOString().split("T")[0];
+  dateSelector.value = savedDate ? savedDate : todayDate;
+  // Check if the saved date is in the past and use today's date if it is
+  dateSelector.value =
+    dateSelector.value < todayDate ? todayDate : dateSelector.value;
 }
 
 // Get the form from the page
@@ -120,6 +135,11 @@ const taskList = document.getElementById("task-list");
 const completedTasks = document.getElementById("completed-tasks");
 const taskListFilter = document.getElementById("leftPriorityFilter");
 const completedTasksFilter = document.getElementById("rightPriorityFilter");
+const dateSelector = document.getElementById("complete_by");
+// Set the minimum date for the date selector to today
+dateSelector.min = new Date().toISOString().split("T")[0];
+// Set the date value after the page loads
+setDateValue();
 
 // Link for the API database
 const LINK = "https://week-5-group-project-server.onrender.com";

@@ -149,6 +149,29 @@ button:focus-visible {
   background-color: rgba(0.5, 0.5, 0.5, 0.4);
 }
 
+.task-container {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: rgba(0.5, 0.5, 0.5, 0.4);
+  color: #ffff00;
+}
+
+.task-text-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  /* width: 100%; */
+}
+
+.task-category-div p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+  color: #54697f;
+}
+
 #completed-tasks {
   border-radius: 10px;
   height: 300px;
@@ -282,6 +305,11 @@ select {
   width: 99%;
   height: 900px;
 }
+
+form {
+  font-size: 1.5em;
+}
+
 #tbox {
   background-color: rgba(0.5, 0.5, 0.5, 0.4);
   display: grid;
@@ -366,7 +394,7 @@ select {
   border: 5px solid transparent;
   width: 140px;
   height: 65px;
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 500;
   font-family: "RuneScape";
   background-color: #1a1a1a;
@@ -375,6 +403,9 @@ select {
   transition: border-color 0.25s;
   margin-top: 40px;
   border-image: url("./assets/Dragonbun-ItemBorder36.png") 30 round;
+}
+input::placeholder {
+  font-size: 1.2em;
 }
 .clock-button {
   border-radius: 8px;

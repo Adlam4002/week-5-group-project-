@@ -102,25 +102,15 @@ export const calculateTotalXp = async () => {
     let playerIcon = document.querySelector("#player-icon");
     function setIcon() {
       if (totalXp >= 0 && totalXp <= 99) {
-        playerIcon.style.width = "75px";
-        playerIcon.style.height = "75px";
-        playerIcon.style.backgroundImage = "url('/Level-1.png')";
+        playerIcon.style.backgroundImage = "url('/level-1.gif')";
       } else if (totalXp >= 100 && totalXp <= 249) {
-        playerIcon.style.width = "75px";
-        playerIcon.style.height = "75px";
-        playerIcon.style.backgroundImage = "url('/level-2.png')";
+        playerIcon.style.backgroundImage = "url('/level-2.gif')";
       } else if (totalXp >= 250 && totalXp <= 499) {
-        playerIcon.style.width = "75px";
-        playerIcon.style.height = "75px";
-        playerIcon.style.backgroundImage = "url('/level-3.png')";
+        playerIcon.style.backgroundImage = "url('/level-3.gif')";
       } else if (totalXp >= 500 && totalXp <= 999) {
-        playerIcon.style.width = "75px";
-        playerIcon.style.height = "75px";
-        playerIcon.style.backgroundImage = "url('/level-4.png')";
+        playerIcon.style.backgroundImage = "url('/level-4.gif')";
       } else if (totalXp >= 1000) {
-        playerIcon.style.width = "75px";
-        playerIcon.style.height = "75px";
-        playerIcon.style.backgroundImage = "url('/level-5.png')";
+        playerIcon.style.backgroundImage = "url('/level-5.gif')";
       }
     }
     setIcon();

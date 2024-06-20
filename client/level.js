@@ -35,7 +35,7 @@ const calculateTotalXp = async () => {
   try {
     // Connect to the database
     const res = await (
-      await fetch("https://week-5-group-project-server.onrender.com")
+      await fetch("https://week-5-group-project-server.onrender.com/gettasks")
     ).json();
 
     let totalXp = 0;

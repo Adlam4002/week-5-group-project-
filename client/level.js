@@ -31,7 +31,7 @@ const xpValues = {
 };
 
 // Function to calculate total XP
-const calculateTotalXp = async () => {
+export const calculateTotalXp = async () => {
   try {
     // Connect to the database
     const res = await (
@@ -60,12 +60,40 @@ const calculateTotalXp = async () => {
     });
 
     console.log(`Total XP: ${totalXp}`);
+    let xpBar = document.querySelector("#xp-to-lvl");
+
+    let buttonTest = document.querySelector("#test-button");
+    buttonTest.addEventListener("click", setXpBoundary);
+
+    function setXpBoundary() {
+      if (totalXp >= 0 && totalXp <= 99) {
+        xpBar.min = 0;
+        xpBar.max = 100;
+        xpBar.value = totalXp;
+      } else if (totalXp >= 100 && totalXp <= 249) {
+        xpBar.min = 100;
+        xpBar.max = 250;
+        xpBar.value = totalXp;
+      } else if (totalXp >= 250 && totalXp <= 499) {
+        xpBar.min = 250;
+        xpBar.max = 500;
+        xpBar.value = totalXp;
+      } else if (totalXp >= 500 && totalXp <= 999) {
+        xpBar.min = 500;
+        xpBar.max = 1000;
+        xpBar.value = totalXp;
+      } else if (totalXp >= 1000) {
+        xpBar.min = 1000;
+        xpBar.max = 100000;
+        xpBar.value = totalXp;
+      }
+    }
+    setXpBoundary();
     return totalXp;
   } catch (err) {
     console.error("Error querying the database:", err);
   }
   return 0;
 };
-
 // Call the function to calculate total XP
 getLevel();

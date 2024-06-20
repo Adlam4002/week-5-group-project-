@@ -2,11 +2,11 @@
 
 Alex, Daniel and Josh as a team will be creating a to-do-list app.
 
-# Project name: RPGet on with your chores
+# Project name: TaskScape
 
-## Render links:
+## Render links: https://week-5-group-project-client.onrender.com
 
-## Repo link:
+## Repo link: https://github.com/Adlam4002/week-5-group-project-
 
 Team members: Alex , Daniel , Josh
 
@@ -29,7 +29,8 @@ Express.js, pg, cors...
 
 Lighthouse report:
 
-#reflections
+# reflections
+
 Our app demonstrates the use of both client-side and server-side code. Our client was initially created using Vite but we removed all content from the basic client it creates. We used HTML to craft a basic skeleton for our web client. This involved creating sections and div with IDs and classes that could be referred to in our JavaScript and CSS. We used CSS to further develop the skeleton and to produce a user-friendly and easily readable front end. Where possible we used darker background colours and images to ensure that our lightly coloured fonts stand out and are easy to read. Within the CSS we used media queries to ensure that the layout of our app is easy to use on a mobile device or a device with a large, wider screen. We then set up our server, we used the express packages express, cors, dotenv and pg. Using these packages enabled us to create a server that can access our database without issue. On our server, we created many endpoints each with its purpose. One was used to receive task data from our database so that we could display it on screen for the users. We made a post route so that when we collect data from our users in a form, we could then send that information to our database using SQL queries. We also created a patch route that allowed us to update the completion status of the tasks on the database, to change data in our database we once again used SQL queries, this was useful as we planned to allow the user to mark a task as complete and that data would change on our database for future use. We also allowed our users to change the completion status of the tasks back to incomplete to allow for users mistakenly marking their tasks as complete.
 Ensure the application is fully responsive and works across modern browsers. The database we used was a Postgresql database created using Supabase. We set up the database using a seed file, in this file we accessed our database and, using SQL queries, created a table to store our data as well as some initial data to populate the database. In our client-side JavaScript, we used many asynchronous functions as we are utilising an external database and the data being sent/ received requires time to travel. Without using these functions our client would not work as our functions would try to run without the necessary data.
 

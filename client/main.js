@@ -145,13 +145,13 @@ addClock.addEventListener("click", () => {
 
     newTimer.id = "tbox";
     // newTimer.style = "border: solid gray;";
-    newTimer.innerHTML = ` <button id="m5">5</button>
-      <button id="m10">10</button>
-      <button id="m15">15</button>
+    newTimer.innerHTML = ` <button class="timer-buttons" id="m5">5</button>
+      <button class="timer-buttons" id="m10">10</button>
+      <button class="timer-buttons" id="m15">15</button>
       <div id="display-time" style="text-align: center"></div>
       <div id="mins"></div>
-      <button id="start">⏯️</button>
-      <button id="reset">Reset</button>`;
+      <button class="timer-buttons" id="start">▶∥</button>
+      <button class="timer-buttons" id="reset">Reset</button>`;
     timerContainer.appendChild(newTimer);
     let b5 = document.querySelector("#m5");
     let b10 = document.querySelector("#m10");
@@ -163,6 +163,21 @@ addClock.addEventListener("click", () => {
       let hour = Math.floor(time / 3600);
       let min = Math.floor((time / 60) % 60);
       let sec = time % 60;
+      // toLocalString() is used to add leading zeros to the time
+      hour = hour.toLocaleString("en-US", {
+        // minimumIntegerDigits is used to specify the minimum number of digits to display
+        minimumIntegerDigits: 2,
+        // useGrouping is set to false to prevent the use of a comma as a thousands separator
+        useGrouping: false,
+      });
+      min = min.toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      });
+      sec = sec.toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      });
       display.textContent = `${hour}:${min}:${sec}`;
     }
     b5.addEventListener("click", () => {

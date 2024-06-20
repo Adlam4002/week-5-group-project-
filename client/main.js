@@ -124,7 +124,8 @@ function setDateValue() {
   const todayDate = new Date().toISOString().split("T")[0];
   dateSelector.value = savedDate ? savedDate : todayDate;
   // Check if the saved date is in the past and use today's date if it is
-  dateSelector.value = savedDate < todayDate ? todayDate : savedDate;
+  dateSelector.value =
+    dateSelector.value < todayDate ? todayDate : dateSelector.value;
 }
 
 // Get the form from the page

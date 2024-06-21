@@ -27,7 +27,7 @@ As a user i want to press a button to mark a task complete.
 
 # Wireframe:
 
-![](https://github.com/Adlam4002/week-5-group-project-/blob/main/client/assets/Dragonbun-ItemBorder3.png)
+![](https://github.com/Adlam4002/week-5-group-project-/blob/main/client/assets/wireframe.jpg)
 
 A list of any libraries, frameworks, or packages that your application requires in order to properly function:
 
@@ -39,7 +39,7 @@ A list of any libraries, frameworks, or packages that your application requires 
 
 # Lighthouse report:
 
-![](https://github.com/Adlam4002/week-5-group-project-/blob/main/client/assets/Dragonbun-ItemBorder3.png)
+![](https://github.com/Adlam4002/week-5-group-project-/blob/main/client/assets/Lighthouse.PNG)
 
 # Reflections
 

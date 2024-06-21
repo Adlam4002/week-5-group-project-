@@ -17,10 +17,12 @@ Problem domain:
 People often struggle to manage and prioritize their daily tasks effectively, and remembering all tasks without a systematic approach can lead to stress and missed deadlines. Balancing work, personal life, and other responsibilities can be challenging without a clear and organized way to visualize and update tasks as priorities change.
 
 User stories:
-As a user I want to be able to a see a list of my pending tasks and completed tasks.
-As a user I want to set a timer to have my task done by.
-As a user I want to filter my tasks by category.
-As a user i want to press a button to mark a task complete.
+<ul>
+<li>As a user I want to be able to a see a list of my pending tasks and completed tasks.<li>
+<li>As a user I want to set a timer to have my task done by.<li>
+<li>As a user I want to filter my tasks by category.<li>
+<li>As a user i want to press a button to mark a task complete.<li>
+<ul>
 
 Wireframe:
 

@@ -58,7 +58,16 @@ Thursday started the same as the previous days but this time the tasks were all 
 
 I found creating the timer fun. I decided to create it all using JS and add all content and styling to the elements as they were created by the function attached to the button. When I first created the timer pressing the button another time would create a new timer alongside the first one. This is what I expected but as they were created with the same IDs etc it broke the functionality of the timer. I decided that when the button was pressed again the timer should become hidden, but not deleted as we wanted the timer to continue running. I ended up achieving this by creating the timer on the first click and then all following clicks would swap the timer between display: grid and display: none. This resulted in a toggleable timer for the user.
 
+I enjoyed styling css elements, Especially the easter egg i included for the user to find that swaps the background img of the task list Div. I also enjoyed learning about box-border img and playing with the values to adjust the border exactly how i wanted it. .Js was my biggest struggle, I managed to create and implement a working leveling system and with the help of pair programming me and my team managed to implement stretched features ontop including a scaling level bar. Overall I feel this project went really well due to my fantastic team, We all got on well and with our respective tasks and any hurdles we had we over came together helping each other reach our desired output 1 task at a time.
+
 ## References
 
 icon images 2,3,4,5 from : https://x.com/LuizGdeMelo
 icon image 1 from: https://itch.io/profile/chiwawa-games
+flyingisland.gif - https://pixel-owl.itch.io  
+app-background.png -https://edermunizz.itch.io/free-pixel-art-forest
+logo.Png - Joshua Day - source me  
+Dragonbun-itemBorder3.png - https://marimo.itch.io/
+Dragonbun-ItemBorder36.png - https://marimo.itch.io/
+fullbackground.jpg - https://brullov.itch.io/oak-woods
+cat.gif - https://ninris.itch.io/cat-pixel-animation
